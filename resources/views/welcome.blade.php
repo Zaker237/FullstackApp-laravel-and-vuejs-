@@ -3,6 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <meta name="verification" content="d1a7386d3099317f797467951abebccb" />
+        <script> window.Laravel = {csrfToken: "{{ csrf_token() }}"} </script>
 
         <title>Laravel Fullstack App</title>
 
@@ -11,10 +14,14 @@
 
     </head>
     <body>
-        <div class="container">
+        <div class="">
             <div id="app">
-                <articles></articles>
+                <articles>
+
+                </articles>
             </div>
         </div>
+
+        <script src="{{ mix('js/app.js') }}"></script>
     </body>
 </html>
